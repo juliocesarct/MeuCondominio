@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MeuCondominio</string>
+    <string name="title_activity_login">Entrar</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha (opcional)</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_up">Registrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">Email invalido</string>
+    <string name="error_invalid_password">Senha invalida!</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Campo obrigatório</string>
+    <string name="error_access">Falha no login</string>
+    <string name="permission_rationale">"Permissão aos contatos necessária para autocompletar informações"</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "309676986032",
+    "firebase_url": "https://meucondominio-fc93f.firebaseio.com",
+    "project_id": "meucondominio-fc93f",
+    "storage_bucket": "meucondominio-fc93f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309676986032:android:c250d0343da9817e",
+        "android_client_info": {
+          "package_name": "com.example.meucondominio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309676986032-lcri86vo5jir2ld9ds7bdlq5855oqnse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meucondominio",
+            "certificate_hash": "c2089af8348052398c204d8f314a5e744b2cd269"
+          }
+        },
+        {
+          "client_id": "309676986032-f7d7qek72201u32be647dgt6hoe3gjun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo2ehqxsi4vq7O2VlsoCJDMdsn_HHNDk0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309676986032-f7d7qek72201u32be647dgt6hoe3gjun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
