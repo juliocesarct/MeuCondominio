@@ -17,9 +17,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.text.TextUtils
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
-import android.widget.TextView
 
 import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
@@ -28,7 +26,6 @@ import android.content.Intent
 import android.widget.Toast
 import com.example.meucondominio.model.Usuario
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 
 import kotlinx.android.synthetic.main.activity_login.*
@@ -181,10 +178,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             return
         }
 
-        // Store values at the time of the login attempt.
-        val emailStr = email.text.toString()
-        val passwordStr = password.text.toString()
-        var success = false
+        var success: Boolean
 
         success = validFields()
 
@@ -325,7 +319,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
     }
 
     private fun goToMain(){
-        val telaSeguinte  = Intent(this,MainActivity::class.java)
+        val telaSeguinte  = Intent(this, MainActivity::class.java)
         startActivity(telaSeguinte)
         finish()
     }

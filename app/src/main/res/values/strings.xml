@@ -1,16 +1,29 @@
 <resources>
-    <string name="app_name">MeuCondominio</string>
+    <string name="app_name">Meu Condominio</string>
     <string name="title_activity_login">Entrar</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Senha (opcional)</string>
-    <string name="action_sign_in">Entrar</string>
-    <string name="action_sign_up">Registrar</string>
-    <string name="action_sign_in_short">Entrar</string>
-    <string name="error_invalid_email">Email invalido</string>
-    <string name="error_invalid_password">Senha invalida!</string>
-    <string name="error_incorrect_password">Senha incorreta</string>
-    <string name="error_field_required">Campo obrigatório</string>
-    <string name="error_access">Falha no login</string>
-    <string name="permission_rationale">"Permissão aos contatos necessária para autocompletar informações"</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_phone">Phone</string>
+    <string name="prompt_apartment">Apartment</string>
+
+    <string name="action_sign_in">Sign-in</string>
+    <string name="action_sign_up">Sign-up</string>
+
+    <string name="error_invalid_email">Invailid Email</string>
+    <string name="error_invalid_password">Invailid Password!</string>
+    <string name="error_incorrect_password">Wrong Password</string>
+    <string name="error_field_required">Required field!</string>
+    <string name="error_access">Fail on login</string>
+    <string name="permission_rationale">"Contatcts access permission required"</string>
+    <string name="title_activity_main">Meu Condominio</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+
+    d<string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
 </resources>

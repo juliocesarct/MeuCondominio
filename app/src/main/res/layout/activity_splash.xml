@@ -5,7 +5,7 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
                                              tools:context=".SplashActivity"
-                                             android:backgroundTint="@color/common_google_signin_btn_text_dark_focused">
+                                             android:backgroundTint="@android:color/transparent">
 
     <ImageView
             android:id="@+id/ivLogo"
@@ -21,5 +21,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.454"
-            app:srcCompat="@drawable/icon" android:backgroundTint="@color/colorPrimary"/>
+            app:srcCompat="@drawable/icon"/>
 </android.support.constraint.ConstraintLayout>
