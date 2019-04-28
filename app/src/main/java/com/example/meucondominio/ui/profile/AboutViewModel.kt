@@ -2,6 +2,6 @@ package com.example.meucondominio.ui.profile
 
 import android.arch.lifecycle.ViewModel
 
-class ProfileViewModel : ViewModel() {
+class AboutViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

@@ -1,3 +1,3 @@
 package com.example.meucondominio.model
 
-data class Usuario(val name: String = "", var email: String = "", val phone: String = "", val apartment: String = "")
+data class Usuario(var name: String = "", var email: String = "", var phone: String = "", var unity: String = "")

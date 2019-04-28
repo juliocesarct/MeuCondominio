@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">Meu Condominio</string>
-    <string name="title_activity_login">Entrar</string>
+    <string name="title_activity_login">Login</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_name">Name</string>
     <string name="prompt_phone">Phone</string>
-    <string name="prompt_apartment">Apartment</string>
+    <string name="prompt_apartment">Unity</string>
 
     <string name="action_sign_in">Sign-in</string>
-    <string name="action_sign_up">Sign-up</string>
+    <string name="action_sign_up">Register</string>
 
     <string name="error_invalid_email">Invailid Email</string>
     <string name="error_invalid_password">Invailid Password!</string>
     <string name="error_incorrect_password">Wrong Password</string>
-    <string name="error_field_required">Required field!</string>
+    <string name="error_field_required">Required field not filled!</string>
     <string name="error_access">Fail on login</string>
     <string name="permission_rationale">"Contatcts access permission required"</string>
     <string name="title_activity_main">Meu Condominio</string>
@@ -22,8 +22,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_about">About</string>
 
-    d<string name="cancel">Cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
+    <string name="registerSuccess">Usuário cadastrado com sucesso!</string>
 </resources>
