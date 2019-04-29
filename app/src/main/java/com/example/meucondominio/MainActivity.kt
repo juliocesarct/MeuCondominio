@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                     //addFragment(fragment)
                     //return true
                 }
-                R.id.navigation_profile -> {
+                R.id.navigation_about -> {
                     //var fragment = AboutFragment.newInstance()
                     //addFragment(fragment)
                     return true

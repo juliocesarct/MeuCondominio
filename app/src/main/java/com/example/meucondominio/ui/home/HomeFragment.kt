@@ -24,9 +24,9 @@ class HomeFragment : Fragment() {
 
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
+    }*/
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -37,6 +37,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view!!, savedInstanceState)
 
-        var editTextHome = view!!.findViewById(R.id.editTextHome) as EditText
+//        var editTextHome = view!!.findViewById(R.id.editTextHome) as EditText
     }
 }
