@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.FrameLayout
 import com.example.meucondominio.ui.home.HomeFragment
+import com.example.meucondominio.ui.profile.AboutFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -41,8 +42,8 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                     //return true
                 }
                 R.id.navigation_about -> {
-                    //var fragment = AboutFragment.newInstance()
-                    //addFragment(fragment)
+                    var fragment = AboutFragment.newInstance()
+                    addFragment(fragment)
                     return true
                 }
             }

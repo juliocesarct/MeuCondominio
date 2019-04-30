@@ -23,8 +23,10 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_about">About</string>
+    <string name="title_poi">Points of Interest</string>
 
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
     <string name="registerSuccess">Usuário cadastrado com sucesso!</string>
+    <string name="title_news">News</string>
 </resources>

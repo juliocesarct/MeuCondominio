@@ -17,12 +17,12 @@ class AboutFragment : Fragment(){
     /**
      * Initialize newInstance for passing paameters
      */
-  /*  companion object {
+    companion object {
         fun newInstance(): AboutFragment {
-            var profileFragment = AboutFragment()
+            var aboutFragment = AboutFragment()
             var args = Bundle()
-            profileFragment.arguments = args
-            return profileFragment
+            aboutFragment.arguments = args
+            return aboutFragment
         }
 
     }
@@ -37,16 +37,16 @@ class AboutFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view!!, savedInstanceState)
 
-        var textName = view!!.findViewById(R.id.etName) as EditText
+        /*var textName = view!!.findViewById(R.id.etName) as EditText
         var textEmail = view!!.findViewById(R.id.etEmail) as EditText
         var textPhone = view!!.findViewById(R.id.etPhone) as EditText
         var textApartment = view!!.findViewById(R.id.etUnity) as EditText
 
         var confirm = view!!.findViewById<Button>(R.id.btConfirm)
-        confirm.setOnClickListener{updateUser()}
+        confirm.setOnClickListener{updateUser()}*/
     }
 
-    private fun updateUser() {
+/*    private fun updateUser() {
 
         var user = Usuario()
 
