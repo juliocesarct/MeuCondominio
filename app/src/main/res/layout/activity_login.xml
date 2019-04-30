@@ -10,7 +10,7 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               android:isScrollContainer="true"
-              tools:context=".LoginActivity">
+              tools:context=".LoginActivity" android:background="@color/common_google_signin_btn_text_dark_focused">
     <!-- Login progress -->
     <ProgressBar
             android:id="@+id/login_progress"
@@ -47,7 +47,8 @@
                         android:hint="@string/prompt_email"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:singleLine="true"/>
+                        android:singleLine="true"
+                        android:background="@color/common_google_signin_btn_text_dark_default"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -65,7 +66,8 @@
                         android:imeOptions="actionUnspecified"
                         android:inputType="textPassword"
                         android:maxLines="1"
-                        android:singleLine="true"/>
+                        android:singleLine="true"
+                        android:background="@color/common_google_signin_btn_text_dark_default"/>
 
             </android.support.design.widget.TextInputLayout>
 

@@ -1,4 +1,4 @@
-package com.example.meucondominio.ui.profile
+package com.example.meucondominio.ui.about
 
 import android.arch.lifecycle.ViewModel
 
