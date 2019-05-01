@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.support.v4.content.ContextCompat.startActivity
 import android.text.TextUtils
+import android.view.View
 import android.widget.Toast
+import com.example.meucondominio.LoginActivity
 import com.example.meucondominio.MainActivity
 import com.example.meucondominio.R
 import com.google.firebase.auth.FirebaseAuth

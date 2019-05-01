@@ -9,7 +9,7 @@
 
     <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/field_height"
             android:inputType="text"
             android:ems="10"
             android:id="@+id/etName"
@@ -19,7 +19,7 @@
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
     <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/field_height"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/etEmail"
@@ -29,7 +29,7 @@
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
     <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/field_height"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/etPhone"
@@ -39,7 +39,7 @@
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
     <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/field_height"
             android:inputType="text"
             android:ems="10"
             android:id="@+id/etUnity"
@@ -49,7 +49,7 @@
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
     <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/field_height"
             android:ems="10"
             android:id="@+id/etPassword"
             android:layout_marginTop="8dp"
@@ -61,22 +61,23 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:id="@+id/btConfSignUp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="49dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="49dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etPassword"/>
+            android:layout_marginStart="49dp"
+            android:layout_marginEnd="49dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" android:orientation="vertical"/>
     <Button
             android:text="Cancel"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:id="@+id/btCancel"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="49dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="49dp"
             android:layout_marginEnd="49dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/btConfirm" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.738"/>
+            app:layout_constraintTop_toBottomOf="@+id/btConfSignUp" app:layout_constraintHorizontal_bias="1.0"
+    />
     <TextView
             android:text="@string/prompt_name"
             android:layout_width="0dp"
@@ -85,7 +86,7 @@
             android:layout_marginTop="87dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
     <TextView
             android:text="@string/prompt_email"
             android:layout_width="0dp"
@@ -94,7 +95,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/etName" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
     <TextView
             android:text="@string/prompt_phone"
             android:layout_width="0dp"
@@ -103,7 +104,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/etEmail" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
     <TextView
             android:text="@string/prompt_apartment"
             android:layout_width="0dp"
@@ -112,7 +113,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/etPhone" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
     <TextView
             android:text="@string/prompt_password"
             android:layout_width="0dp"
@@ -121,7 +122,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/etUnity" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
     <TextView
             android:text="Profile"
             android:layout_width="wrap_content"

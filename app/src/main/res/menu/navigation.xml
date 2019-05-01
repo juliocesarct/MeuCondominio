@@ -7,12 +7,12 @@
             android:title="@string/title_news"/>
 
     <item
-            android:id="@+id/navigation_dashboard"
+            android:id="@+id/navigation_providers"
             android:icon="@drawable/ic_providers_black_24dp"
-            android:title="@string/title_dashboard"/>
+            android:title="@string/title_providers"/>
 
     <item
-            android:id="@+id/navigation_notifications"
+            android:id="@+id/navigation_poi"
             android:icon="@drawable/ic_location_on_black_24dp"
             android:title="@string/title_poi"/>
     <item

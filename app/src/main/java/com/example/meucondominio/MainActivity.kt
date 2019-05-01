@@ -8,6 +8,8 @@ import android.view.MenuItem
 import android.widget.FrameLayout
 import com.example.meucondominio.ui.home.HomeFragment
 import com.example.meucondominio.ui.about.AboutFragment
+import com.example.meucondominio.ui.poi.PoiFragment
+import com.example.meucondominio.ui.providers.providerFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -30,19 +32,24 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
             when (item.itemId) {
                 R.id.navigation_home -> {
-
-                    val fragment = HomeFragment.Companion.newInstance()
+                    val fragment = HomeFragment.newInstance()
                     addFragment(fragment)
-
                     return true
                 }
-                R.id.navigation_dashboard -> {
-                    // val fragment = FragmentDashboard()
-                    //addFragment(fragment)
-                    //return true
+
+                R.id.navigation_providers -> {
+                    val fragment = providerFragment.newInstance(1)
+                    addFragment(fragment)
+                    return true
+                }
+
+                R.id.navigation_poi -> {
+                    val fragment = PoiFragment.newInstance()
+                    addFragment(fragment)
+                    return true
                 }
                 R.id.navigation_about -> {
-                    var fragment = AboutFragment.newInstance()
+                    val fragment = AboutFragment.newInstance()
                     addFragment(fragment)
                     return true
                 }
