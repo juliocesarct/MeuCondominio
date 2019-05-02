@@ -1,12 +1,9 @@
 package com.example.meucondominio
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.view.View
 import android.widget.Toast
 import com.example.meucondominio.model.Usuario
 import com.example.meucondominio.util.Utils
@@ -24,7 +21,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
         //mAuth = FirebaseAuth.getInstance()
 
-        btConfSignUp.setOnClickListener { attemptSignUp() }
+        btAddNews.setOnClickListener { attemptSignUp() }
         btCancel.setOnClickListener{goToLogin()}
     }
 
@@ -38,16 +35,16 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
     private fun attemptSignUp() {
 
-        var success: Boolean =  validFields(etEmail.text.toString(), etPassword.text.toString(),this)
+        var success: Boolean =  validFields(etDescription.text.toString(), etPassword.text.toString(),this)
 
         if (success) {
             mAuth.createUserWithEmailAndPassword(
-                etEmail.text.toString(),
+                etDescription.text.toString(),
                 etPassword.text.toString())
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         salvaNoRealTimeDatabase()
-                        startLogin(etEmail.text.toString(),etPassword.text.toString(),this,mAuth )
+                        startLogin(etDescription.text.toString(),etPassword.text.toString(),this,mAuth )
                     } else {
                         Toast.makeText(this,
                             it.exception?.message,
@@ -58,7 +55,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
             Toast.makeText(this,
                 R.string.error_field_required,
                 Toast.LENGTH_LONG).show()
-            etName.requestFocus()
+            etTitle.requestFocus()
         }
     }
 
@@ -66,8 +63,8 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
         var user = Usuario()
 
-        user.name =  etName.text.toString()
-        user.email = etEmail.text.toString()
+        user.name =  etTitle.text.toString()
+        user.email = etDescription.text.toString()
         user.phone = etPhone.text.toString()
         user.unity = etUnity.text.toString()
 
@@ -80,7 +77,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
                         getString(R.string.registerSuccess),
                         Toast.LENGTH_LONG).show()
                     val intent = Intent()
-                    intent.putExtra("email", etEmail.text.toString())
+                    intent.putExtra("email", etDescription.text.toString())
                     intent.putExtra("senha", etPassword.text.toString())
                     setResult(Activity.RESULT_OK,intent)
 

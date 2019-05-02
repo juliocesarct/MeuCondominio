@@ -30,4 +30,6 @@
     <string name="registerSuccess">Usuário cadastrado com sucesso!</string>
     <string name="title_news">News</string>
     <string name="title_providers">Providers</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
 </resources>
