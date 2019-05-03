@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorGray">#708090</color>
-    <color name="colorSalmon">#E9967A</color>
+    <color name="color1">#000000</color>
+    <color name="color2">#636994</color>
+    <color name="color3">#B1B1B1</color>
     <color name="colorAccent">#D81B60</color>
 </resources>

@@ -26,7 +26,7 @@
             android:layout_height="@dimen/Icons"
             android:id="@+id/btGym" android:background="@drawable/ic_gym_icon"
             app:layout_constraintTop_toBottomOf="@+id/btHospital" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="50dp" android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp" android:layout_marginStart="50dp"
     />
     <Button
             android:layout_width="@dimen/Icons"
@@ -34,7 +34,7 @@
             android:id="@+id/btRestaurant"
             android:background="@drawable/ic_restaurant_icon"
             app:layout_constraintTop_toBottomOf="@+id/btSchool" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="50dp" android:layout_marginTop="50dp"/>
+            android:layout_marginEnd="50dp" android:layout_marginTop="100dp"/>
     <Button
             android:text="."
             android:layout_width="@dimen/Icons"
