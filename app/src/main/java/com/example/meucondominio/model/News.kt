@@ -1,14 +1,10 @@
 package com.example.meucondominio.model
 
-class News {
-    var user: String?
-    var title: String?
-    var description: String?
-    //var imageURL : String? = null
+data class NewsResponse(val content: List<News>)
 
-    constructor(user: String? = null, title: String? = null, description: String? = null) {
-        this.user = user
-        this.title = title
-        this.description = description
-    }
+class News {
+    var user: String? = null
+    var title: String? = null
+    var description: String? = null
+    //var imageURL : String? = null
 }
