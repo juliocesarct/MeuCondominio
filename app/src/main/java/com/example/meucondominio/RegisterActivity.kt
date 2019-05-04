@@ -21,7 +21,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
         //mAuth = FirebaseAuth.getInstance()
 
-        btAddNews.setOnClickListener { attemptSignUp() }
+        btConfirm.setOnClickListener { attemptSignUp() }
         btCancel.setOnClickListener{goToLogin()}
     }
 
@@ -35,16 +35,16 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
     private fun attemptSignUp() {
 
-        var success: Boolean =  validFields(etDescription.text.toString(), etPassword.text.toString(),this)
+        var success: Boolean =  validFields(etEmail.text.toString(), etPassword.text.toString(),this)
 
         if (success) {
             mAuth.createUserWithEmailAndPassword(
-                etDescription.text.toString(),
+                etEmail.text.toString(),
                 etPassword.text.toString())
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         salvaNoRealTimeDatabase()
-                        startLogin(etDescription.text.toString(),etPassword.text.toString(),this,mAuth )
+                        startLogin(etEmail.text.toString(),etPassword.text.toString(),this,mAuth )
                     } else {
                         Toast.makeText(this,
                             it.exception?.message,
@@ -55,7 +55,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
             Toast.makeText(this,
                 R.string.error_field_required,
                 Toast.LENGTH_LONG).show()
-            etTitle.requestFocus()
+            etName.requestFocus()
         }
     }
 
@@ -63,8 +63,8 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
         var user = Usuario()
 
-        user.name =  etTitle.text.toString()
-        user.email = etDescription.text.toString()
+        user.name =  etName.text.toString()
+        user.email = etEmail.text.toString()
         user.phone = etPhone.text.toString()
         user.unity = etUnity.text.toString()
 
@@ -77,7 +77,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
                         getString(R.string.registerSuccess),
                         Toast.LENGTH_LONG).show()
                     val intent = Intent()
-                    intent.putExtra("email", etDescription.text.toString())
+                    intent.putExtra("email", etEmail.text.toString())
                     intent.putExtra("senha", etPassword.text.toString())
                     setResult(Activity.RESULT_OK,intent)
 

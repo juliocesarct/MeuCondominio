@@ -1,5 +1,6 @@
 package com.example.meucondominio.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -12,6 +13,7 @@ import com.example.meucondominio.R.layout.home_row
 import com.example.meucondominio.model.News
 import com.firebase.ui.database.*
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
 
@@ -42,6 +44,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view!!, savedInstanceState)
+
+        btAddNew.setOnClickListener{telaAddNews()}
+
+    }
+
+    fun telaAddNews(){
+
+        val addNewsAct  = Intent(context, AddNewsActivity::class.java)
+
+        startActivity(addNewsAct)
 
     }
 
