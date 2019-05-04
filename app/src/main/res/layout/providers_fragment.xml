@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/providers"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.providers.ProvidersFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.home.HomeFragment"
+                android:background="@color/color2">
 
-    <TextView
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
+    <Button
+            android:text="Add Provider +"
+            android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:text="ProvidersFragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-</android.support.constraint.ConstraintLayout>
+            android:id="@+id/btAddProvider"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="226dp"
+            android:textSize="@dimen/titles"
+            android:background="@color/color2"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:textAllCaps="false" style="@android:style/Widget.Material.Light.Button.Borderless.Colored"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="661dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="70dp"
+            android:id="@+id/listProviders"
+            android:background="@color/common_google_signin_btn_text_dark_default"/>
+</RelativeLayout>

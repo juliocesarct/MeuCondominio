@@ -1,38 +1,38 @@
-package com.example.meucondominio.ui.home
+package com.example.meucondominio.ui.providers
 
-import android.app.Activity
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.app.Activity
+import android.content.Intent
 import android.widget.Toast
 import com.example.meucondominio.R
-import com.example.meucondominio.model.News
+import com.example.meucondominio.model.Provider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_add_news.*
+import kotlinx.android.synthetic.main.activity_add_provider.*
 
-class AddNewsActivity : AppCompatActivity() {
+class AddProviderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_news)
+        setContentView(R.layout.activity_add_provider)
 
-        btAddNews.setOnClickListener{saveNewsAtRTDB()}
-        btCancelAddNew.setOnClickListener{finish()}
+        btConfirmProvider.setOnClickListener{savePrpviderAtRTDB()}
+        btCancelAddProvider.setOnClickListener{finish()}
     }
 
-    private fun saveNewsAtRTDB() {
+    private fun savePrpviderAtRTDB() {
 
-        var new = News()
+        var provider = Provider()
 
-        new.user = FirebaseAuth.getInstance().currentUser!!.email!!.toString()
-        new.title = etAddTitle.text.toString()
-        new.description = etAddDescription.text.toString()
+        provider.userAddedProvider = FirebaseAuth.getInstance().currentUser!!.email!!.toString()
+        provider.providerTitle = etAddProviderTitle.text.toString()
+        provider.providerDescription = etAddProviderDesc.text.toString()
+        provider.providerPhone = etAddProviderPhone.text.toString()
 
-        FirebaseDatabase.getInstance().getReference("News")
-            //.child(FirebaseAuth.getInstance().currentUser!!.uid!!)
+        FirebaseDatabase.getInstance().getReference("Providers")
             .push()
-            .setValue(new)
+            .setValue(provider)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(this,

@@ -8,11 +8,9 @@ import kotlinx.android.synthetic.main.home_row.view.*
 class NewsViewHolder(private val newsView: View, var news: News? = null):RecyclerView.ViewHolder(newsView) {
 
     fun bind(news: News) {
-        with(news) {
-            newsView.tvUser?.text = news.user
-            newsView.tvTitleNews?.text = news.title
-            newsView.tvDescription?.text = news.description
-        }
+        newsView.tvUser?.text = news.user
+        newsView.tvTitleNews?.text = news.title
+        newsView.tvDescription?.text = news.description
     }
     /*
     var user = newsView.findViewById(R.id.tvUser) as TextView

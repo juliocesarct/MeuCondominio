@@ -16,7 +16,6 @@
     <string name="error_incorrect_password">Wrong Password</string>
     <string name="error_field_required">Required field not filled!</string>
     <string name="error_access">Fail on login</string>
-    <string name="permission_rationale">"Contatcts access permission required"</string>
     <string name="title_activity_main">Meu Condominio</string>
 
     <string name="title_home">Home</string>
@@ -27,10 +26,11 @@
 
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
-    <string name="registerSuccess">Usuário cadastrado com sucesso!</string>
+    <string name="registerSuccess">User successfully registered!</string>
     <string name="title_news">News</string>
     <string name="title_providers">Providers</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
-    <string name="AddNewsSuccess">Success in adding news!</string>
+    <string name="AddSuccess">Success in adding registry!</string>
+    <string name="Publisher">Publisher:</string>
 </resources>

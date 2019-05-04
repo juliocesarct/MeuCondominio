@@ -36,7 +36,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTlt2" android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
-            android:text="User Name:"
+            android:text="@string/Publisher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvUsr"

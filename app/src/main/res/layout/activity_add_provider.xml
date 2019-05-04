@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.providers.AddProviderActivity">
+    <EditText
+            android:layout_width="0dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/etAddProviderTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddProviderTitle" android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/tvAddProviderPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:layout_height="@dimen/field_height"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/field_height"
+            android:ems="10"
+            android:id="@+id/etAddProviderPhone"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddProviderPhone"
+            android:layout_marginBottom="13dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvAddProviderDesc" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:inputType="phone"/>
+    <Button
+            android:text="@string/confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/field_height"
+            android:id="@+id/btConfirmProvider"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/etAddProviderDesc"
+            android:layout_marginBottom="12dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btCancelAddProvider" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp" android:layout_marginEnd="49dp"
+    />
+    <Button
+            android:text="Cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/field_height"
+            android:id="@+id/btCancelAddProvider"
+            app:layout_constraintTop_toBottomOf="@+id/btConfirmProvider"
+            android:layout_marginBottom="203dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="49dp"
+            android:layout_marginEnd="49dp"/>
+    <TextView
+            android:text="@string/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAddProviderTitle"
+            android:textSize="@dimen/texts"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleProvider" android:layout_marginBottom="9dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/etAddProviderTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/prompt_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAddProviderPhone"
+            android:textSize="@dimen/texts"
+            app:layout_constraintTop_toBottomOf="@+id/etAddProviderTitle"
+            android:layout_marginBottom="7dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etAddProviderPhone" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+    />
+    <TextView
+            android:text="@string/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAddProviderDesc"
+            android:textSize="@dimen/texts"
+            app:layout_constraintTop_toBottomOf="@+id/etAddProviderPhone"
+            android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etAddProviderDesc" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+    />
+    <TextView
+            android:text="Add Provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitleProvider"
+            android:textStyle="bold" android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvAddProviderTitle" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/field_height"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/etAddProviderDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddProviderDesc"
+            android:layout_marginBottom="114dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btConfirmProvider" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+    />
+
+</android.support.constraint.ConstraintLayout>

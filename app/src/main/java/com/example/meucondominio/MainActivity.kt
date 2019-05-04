@@ -9,6 +9,7 @@ import android.widget.FrameLayout
 import com.example.meucondominio.ui.home.HomeFragment
 import com.example.meucondominio.ui.about.AboutFragment
 import com.example.meucondominio.ui.poi.PoiFragment
+import com.example.meucondominio.ui.providers.ProvidersFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -37,8 +38,8 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                 }
 
                 R.id.navigation_providers -> {
-                   // val fragment = providerFragment.newInstance(1)
-                   // addFragment(fragment)
+                    val fragment = ProvidersFragment.newInstance()
+                    addFragment(fragment)
                     return true
                 }
 

@@ -45,15 +45,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view!!, savedInstanceState)
 
-        btAddNew.setOnClickListener{telaAddNews()}
-
-    }
-
-    fun telaAddNews(){
-
-        val addNewsAct  = Intent(context, AddNewsActivity::class.java)
-
-        startActivity(addNewsAct)
+        btAddNew.setOnClickListener{startActivity(Intent(context, AddNewsActivity::class.java))}
 
     }
 

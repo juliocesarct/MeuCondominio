@@ -48,7 +48,8 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:background="@color/common_google_signin_btn_text_dark_default"/>
+                        android:background="@color/common_google_signin_btn_text_dark_default"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -67,7 +68,8 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:background="@color/common_google_signin_btn_text_dark_default"/>
+                        android:background="@color/common_google_signin_btn_text_dark_default"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -76,7 +78,7 @@
                     style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:text="@string/action_sign_in"
                     android:textStyle="bold"/>
             <Button
@@ -84,7 +86,7 @@
                     style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/action_sign_up"
                     android:textStyle="bold"/>
         </LinearLayout>
