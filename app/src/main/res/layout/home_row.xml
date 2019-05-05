@@ -74,11 +74,11 @@
             tools:layout_editor_absoluteY="0dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     <ImageView
-            android:layout_width="24dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="?attr/actionModeShareDrawable"
             android:id="@+id/ivShare"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/tvUser" app:layout_constraintStart_toEndOf="@+id/tvTitleNews"
             android:layout_marginStart="8dp"/>

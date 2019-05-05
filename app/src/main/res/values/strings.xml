@@ -8,7 +8,7 @@
     <string name="prompt_phone">Phone</string>
     <string name="prompt_apartment">Unity</string>
 
-    <string name="action_sign_in">Sign-in</string>
+    <string name="action_sign_in">Login</string>
     <string name="action_sign_up">Register</string>
 
     <string name="error_invalid_email">Invailid Email</string>
@@ -37,4 +37,5 @@
     <string name="UserValid">You can only change news items included by your user!</string>
     <string name="Delete">Delete</string>
     <string name="changeSuccess">Changes saved successfully!</string>
+    <string name="Logout">Logout</string>
 </resources>
