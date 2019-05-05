@@ -10,6 +10,7 @@ import com.example.meucondominio.ui.home.HomeFragment
 import com.example.meucondominio.ui.about.AboutFragment
 import com.example.meucondominio.ui.poi.PoiFragment
 import com.example.meucondominio.ui.providers.ProvidersFragment
+import com.google.firebase.messaging.FirebaseMessaging
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -80,6 +81,8 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
         val fragment = HomeFragment.Companion.newInstance()
         addFragment(fragment)
+
+        FirebaseMessaging.getInstance().isAutoInitEnabled = true
     }
 
     private fun setUpDagger() {
