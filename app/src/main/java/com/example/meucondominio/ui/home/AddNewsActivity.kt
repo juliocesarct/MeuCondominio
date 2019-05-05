@@ -2,6 +2,7 @@ package com.example.meucondominio.ui.home
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.*
@@ -20,6 +21,8 @@ class AddNewsActivity : AppCompatActivity() {
         val newsId : String? = intent.getStringExtra("newsId")
         val title: String? = intent.getStringExtra("modelTitle")
         val desc: String? = intent.getStringExtra("modelDesc")
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_news)

@@ -2,6 +2,7 @@ package com.example.meucondominio
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -17,6 +18,8 @@ class RegisterActivity : AppCompatActivity(), Utils {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
