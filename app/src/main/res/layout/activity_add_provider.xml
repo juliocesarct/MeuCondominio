@@ -22,10 +22,11 @@
             android:ems="10"
             android:id="@+id/etAddProviderPhone"
             app:layout_constraintTop_toBottomOf="@+id/tvAddProviderPhone"
-            android:layout_marginBottom="13dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="13dp"
             app:layout_constraintBottom_toTopOf="@+id/tvAddProviderDesc" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-            android:inputType="phone"/>
+            android:layout_marginStart="8dp"
+            android:inputType="phone"
+            app:layout_constraintEnd_toStartOf="@+id/ivCallProvider" android:layout_marginEnd="8dp"/>
     <Button
             android:text="@string/confirm"
             android:layout_width="0dp"
@@ -33,20 +34,20 @@
             android:id="@+id/btConfirmProvider"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/etAddProviderDesc"
-            android:layout_marginBottom="12dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/btCancelAddProvider" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="49dp" android:layout_marginEnd="49dp"
-    />
+            android:layout_marginTop="30dp"/>
     <Button
             android:text="Cancel"
             android:layout_width="0dp"
             android:layout_height="@dimen/field_height"
             android:id="@+id/btCancelAddProvider"
-            app:layout_constraintTop_toBottomOf="@+id/btConfirmProvider"
-            android:layout_marginBottom="203dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="49dp"
-            android:layout_marginEnd="49dp"/>
+            android:layout_marginStart="49dp"
+            android:layout_marginEnd="49dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btDeleteProvider"/>
     <TextView
             android:text="@string/title"
             android:layout_width="0dp"
@@ -100,5 +101,19 @@
             app:layout_constraintBottom_toTopOf="@+id/btConfirmProvider" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
     />
+    <Button
+            android:text="@string/Delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btDeleteProvider" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="49dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btConfirmProvider" android:background="@color/color2"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/stat_sys_phone_call_forward"
+            android:id="@+id/ivCallProvider"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddProviderPhone"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -28,7 +28,13 @@ class AddNewsActivity : AppCompatActivity() {
         if(desc != null){etAddDescription.setText(desc)}
 
         if( newsId == null ){
-            btAddNews.setOnClickListener { saveNewsAtRTDB() }
+            btAddNews.setOnClickListener {
+            if(etAddTitle.text.isNotEmpty() and etAddDescription.text.isNotEmpty()){
+                saveNewsAtRTDB()
+            }else{
+                Toast.makeText(this,getString(R.string.error_field_required),Toast.LENGTH_LONG).show()
+            }
+        }
             btDeleteNews.visibility = GONE
         }else{
             if(user == FirebaseAuth.getInstance().currentUser!!.email!!.toString()){

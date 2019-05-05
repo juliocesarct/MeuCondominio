@@ -8,13 +8,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.meucondominio.R
 import com.example.meucondominio.R.layout.home_fragment
 import com.example.meucondominio.R.layout.home_row
 import com.example.meucondominio.model.News
 import com.firebase.ui.database.*
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.home_fragment.*
 
@@ -22,6 +19,13 @@ class HomeFragment : Fragment() {
 
     lateinit var mRecyclerView : RecyclerView
     lateinit var mDatabase : DatabaseReference
+    private var shareListener: (News)->Unit = {
+            startActivity(Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, it.title.toString()+": "+it.description.toString() )
+                type = "text/plain"
+            })
+    }
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -65,14 +69,14 @@ class HomeFragment : Fragment() {
         var options = FirebaseRecyclerOptions.Builder<News>().setQuery(mDatabase,News::class.java).setLifecycleOwner(this).build()
         var fbRecyclerAdapter = object :FirebaseRecyclerAdapter<News,NewsViewHolder>(options){
             override fun onCreateViewHolder(p0: ViewGroup, p1: Int): NewsViewHolder {
-                val v = LayoutInflater.from(p0?.context).inflate(home_row, p0, false)
-                return NewsViewHolder(v,listener)
+                val v = LayoutInflater.from(p0.context).inflate(home_row, p0, false)
+                return NewsViewHolder(v,listener,shareListener)
             }
 
             override fun onBindViewHolder(holder: NewsViewHolder, position: Int, model: News) {
 
                 model.idNews = this.getRef(position).key
-                holder.bind(model,listener)
+                holder.bind(model,listener,shareListener)
 
             }
 

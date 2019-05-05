@@ -32,8 +32,16 @@ class ProvidersFragment : Fragment() {
     lateinit var mRecyclerView : RecyclerView
     lateinit var mDatabase : DatabaseReference
     private var dialListener: (Provider)->Unit = {
-        startActivity(Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",it.providerPhone.toString(),null)))
-    }
+        startActivity(Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",it.providerPhone.toString(),null)))}
+    private var listener: (Provider)->Unit = {
+        var providerIntent = Intent(context, AddProviderActivity::class.java)
+        providerIntent.putExtra("modelUser",it.userAddedProvider)
+        providerIntent.putExtra("modelTitle",it.providerTitle)
+        providerIntent.putExtra("modelDesc",it.providerDescription)
+        providerIntent.putExtra("modelPhone",it.providerPhone)
+        providerIntent.putExtra("providerId",it.idProvider)
+        startActivity(providerIntent)}
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,11 +65,6 @@ class ProvidersFragment : Fragment() {
 
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-       //viewModel = ViewModelProviders.of(this).get(ProvidersViewModel::class.java)
-    }
-
     private fun logRecyclerView(){
 
         var options = FirebaseRecyclerOptions.Builder<Provider>().setQuery(mDatabase, Provider::class.java).setLifecycleOwner(this).build()
@@ -69,12 +72,12 @@ class ProvidersFragment : Fragment() {
             override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ProvidersViewHolder {
                 val v = LayoutInflater.from(p0?.context).inflate(R.layout.provider_row, p0, false)
 
-                return ProvidersViewHolder(v,dialListener)
+                return ProvidersViewHolder(v,dialListener,listener)
             }
 
             override fun onBindViewHolder(holder: ProvidersViewHolder, position: Int, model: Provider) {
-                holder.bind(model,dialListener)
-            }
+               model.idProvider = this.getRef(position).key
+               holder.bind(model,dialListener,listener)            }
 
         }
 
