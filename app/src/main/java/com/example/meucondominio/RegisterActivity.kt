@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity(), Utils {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        //mAuth = FirebaseAuth.getInstance()
+        mAuth = FirebaseAuth.getInstance()
 
         btConfirm.setOnClickListener { attemptSignUp() }
         btCancel.setOnClickListener{goToLogin()}

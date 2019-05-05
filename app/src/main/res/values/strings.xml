@@ -32,5 +32,9 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="AddSuccess">Success in adding registry!</string>
+    <string name="deleteSuccess">Success in deleting registry!</string>
     <string name="Publisher">Publisher:</string>
+    <string name="UserValid">You can only change news items included by your user!</string>
+    <string name="Delete">Delete</string>
+    <string name="changeSuccess">Changes saved successfully!</string>
 </resources>

@@ -42,10 +42,10 @@ dependencies {
 
     //Incluidas na mão
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.0'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
 
     implementation 'com.google.firebase:firebase-auth:16.2.1'
     implementation 'com.google.firebase:firebase-database:16.0.1'
-    //implementation 'com.google.firebase:firebase-messaging:17.3.0'
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.firebaseui:firebase-ui-database:4.3.2'
 

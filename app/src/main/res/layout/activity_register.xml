@@ -8,127 +8,120 @@
         tools:context=".RegisterActivity">
 
     <EditText
-            android:layout_width="0dp"
-            android:layout_height="@dimen/field_height"
+            android:layout_width="395dp"
+            android:layout_height="0dp"
             android:inputType="text"
             android:ems="10"
             android:id="@+id/etName"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvAddTitle" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvAddTitle"
+            android:layout_marginBottom="12dp" app:layout_constraintBottom_toTopOf="@+id/tvPhone"/>
     <EditText
-            android:layout_width="0dp"
-            android:layout_height="@dimen/field_height"
+            android:layout_width="395dp"
+            android:layout_height="0dp"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/etEmail"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvAddDescription" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+            android:layout_marginBottom="12dp" app:layout_constraintBottom_toTopOf="@+id/tvAddTitle"/>
     <EditText
-            android:layout_width="0dp"
-            android:layout_height="@dimen/field_height"
+            android:layout_width="395dp"
+            android:layout_height="0dp"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/etPhone"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvPhone" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvPhone"
+            android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/tvUnity"/>
     <EditText
-            android:layout_width="0dp"
-            android:layout_height="@dimen/field_height"
+            android:layout_width="395dp"
+            android:layout_height="0dp"
             android:inputType="text"
             android:ems="10"
             android:id="@+id/etUnity"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvUnity" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvUnity"
+            android:layout_marginBottom="29dp" app:layout_constraintBottom_toTopOf="@+id/tvPassword"/>
     <EditText
-            android:layout_width="0dp"
-            android:layout_height="@dimen/field_height"
+            android:layout_width="395dp"
+            android:layout_height="0dp"
             android:ems="10"
             android:id="@+id/etPassword"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvPassword" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPassword" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/btConfirm"/>
     <Button
             android:text="@string/confirm"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_width="313dp"
+            android:layout_height="0dp"
             android:id="@+id/btConfirm"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="49dp"
-            android:layout_marginEnd="49dp"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/etPassword" android:orientation="vertical"/>
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btCancel"/>
     <Button
             android:text="Cancel"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_width="313dp"
+            android:layout_height="0dp"
             android:id="@+id/btCancel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="49dp"
-            android:layout_marginEnd="49dp" android:layout_marginTop="8dp"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintTop_toBottomOf="@+id/btConfirm"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btConfirm" android:layout_marginBottom="63dp"/>
     <TextView
             android:text="@string/prompt_name"
-            android:layout_width="0dp"
+            android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvAddTitle"
-            android:layout_marginTop="87dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
+            android:textSize="@dimen/texts"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/etName"/>
     <TextView
             android:text="@string/prompt_email"
-            android:layout_width="0dp"
+            android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvEmail"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etAddTitle" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/texts" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="75dp" android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
     <TextView
             android:text="@string/prompt_phone"
-            android:layout_width="0dp"
+            android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvPhone"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etAddDescription" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/texts" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
+            app:layout_constraintTop_toBottomOf="@+id/etName" android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/etPhone"/>
     <TextView
             android:text="@string/prompt_apartment"
-            android:layout_width="0dp"
+            android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvUnity"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etPhone" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
+            android:textSize="@dimen/texts"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPhone" android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/etUnity"/>
     <TextView
             android:text="@string/prompt_password"
-            android:layout_width="0dp"
+            android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:id="@+id/tvPassword"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etUnity" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:textSize="@dimen/texts"/>
+            android:textSize="@dimen/texts"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUnity" android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/etPassword"/>
     <TextView
             android:text="Profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvTitleNews"
             android:textStyle="bold" android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp" app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

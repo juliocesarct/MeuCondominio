@@ -19,7 +19,7 @@
     <Button
             android:text="@string/confirm"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="@dimen/field_height"
             android:id="@+id/btAddNews"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,14 +31,14 @@
     <Button
             android:text="Cancel"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="@dimen/field_height"
             android:id="@+id/btCancelAddNew"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="49dp"
-            android:layout_marginEnd="49dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/btAddNews" app:layout_constraintHorizontal_bias="1.0"
-    />
+            android:layout_marginEnd="49dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btDeleteNews"/>
     <TextView
             android:text="@string/title"
             android:layout_width="0dp"
@@ -74,5 +74,15 @@
             app:layout_constraintTop_toBottomOf="@+id/tvAddDescription" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="@string/Delete"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/field_height"
+            android:id="@+id/btDeleteNews" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="49dp"
+            android:background="@color/color2"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btAddNews"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,7 @@
 package com.example.meucondominio.ui.providers
 
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.meucondominio.R.layout.provider_row
 import com.example.meucondominio.R
 import com.example.meucondominio.model.Provider
 import com.firebase.ui.database.FirebaseRecyclerAdapter
@@ -30,10 +29,11 @@ class ProvidersFragment : Fragment() {
         }
     }
 
-    private lateinit var viewModel: ProvidersViewModel
     lateinit var mRecyclerView : RecyclerView
     lateinit var mDatabase : DatabaseReference
-
+    private var dialListener: (Provider)->Unit = {
+        startActivity(Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",it.providerPhone.toString(),null)))
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -59,7 +59,7 @@ class ProvidersFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ProvidersViewModel::class.java)
+       //viewModel = ViewModelProviders.of(this).get(ProvidersViewModel::class.java)
     }
 
     private fun logRecyclerView(){
@@ -67,13 +67,13 @@ class ProvidersFragment : Fragment() {
         var options = FirebaseRecyclerOptions.Builder<Provider>().setQuery(mDatabase, Provider::class.java).setLifecycleOwner(this).build()
         var fbRecyclerAdapter = object : FirebaseRecyclerAdapter<Provider, ProvidersViewHolder>(options){
             override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ProvidersViewHolder {
-                val v = LayoutInflater.from(p0?.context).inflate(provider_row, p0, false)
+                val v = LayoutInflater.from(p0?.context).inflate(R.layout.provider_row, p0, false)
 
-                return ProvidersViewHolder(v)
+                return ProvidersViewHolder(v,dialListener)
             }
 
             override fun onBindViewHolder(holder: ProvidersViewHolder, position: Int, model: Provider) {
-                holder.bind(model)
+                holder.bind(model,dialListener)
             }
 
         }

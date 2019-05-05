@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.meucondominio">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
             android:allowBackup="true"
@@ -9,12 +10,13 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.providers.AddProviderActivity">
-        </activity>
-        <activity android:name=".ui.providers.AddProvidersActivity">
-        </activity>
-        <activity android:name=".ui.home.AddNewsActivity">
-        </activity>
+
+        <service android:name=".fcm.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -33,6 +35,10 @@
         <activity
                 android:name=".LoginActivity"
                 android:label="@string/title_activity_login">
+        </activity>
+        <activity android:name=".ui.providers.AddProviderActivity">
+        </activity>
+        <activity android:name=".ui.home.AddNewsActivity">
         </activity>
     </application>
 
